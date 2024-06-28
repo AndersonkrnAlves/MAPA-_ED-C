@@ -5,7 +5,7 @@
 
 struct Pilha
     {
-        char intens[MAX_SIZE];
+        char itens[MAX_SIZE];//intens 
         int topo;
     };
 
@@ -21,7 +21,10 @@ int vazia(struct Pilha *p)
 
 void push(struct Pilha *p, char item) 
     {
-        //code
+        char letra_ini;
+        char letra_final;
+        letra_ini = 0;
+        letra_final = 0;
     }
 
 char pop(struct Pilha *p)
@@ -36,7 +39,7 @@ char topo(struct Pilha *p)
     
 void limpar(struct Pilha *p)
     {
-
+        //code
     }
 
 int main()
@@ -61,7 +64,7 @@ int main()
                     case 1:
                         char palavra[MAX_SIZE];
                             printf("Digite a palavra  a ser adicionada: \n");
-                            gets(palavra);
+                            scanf("%s", &palavra);
 
                             for (int i = 0; i < strlen(palavra); i++)
                                 {

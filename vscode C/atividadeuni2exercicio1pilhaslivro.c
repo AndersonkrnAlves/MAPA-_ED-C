@@ -22,9 +22,9 @@ struct tpilha
 //b
 struct tpilha pilha;
 
-void fila_entrar ();
-void fila_sair ();
-void fila_mostrar ();
+void pila_entrar ();
+void pila_sair ();
+void pila_mostrar ();
 void menu_mostrar ();
 
 int main ()
@@ -32,22 +32,22 @@ int main ()
         setlocale(LC_ALL, "Portuguese");
 
         op = 1;
-        fila.ini = 0;
-        fila.fim = 0;
+        pila.ini = 0;
+        pila.fim = 0;
 
         while (op != 0)
             {
                 system("cls");
-                fila_mostrar ();
+                pila_mostrar ();
                 menu_mostrar ();
                 scanf("%d", &op);
                 switch (op)
                     {
                         case 1:
-                            fila_entrar ();
+                            pila_entrar ();
                             break;
                         case 2:
-                            fila_sair ();
+                            pila_sair ();
                             break;
                     }
             }
