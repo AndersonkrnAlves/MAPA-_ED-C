@@ -5,7 +5,7 @@
 
 struct Pilha
     {
-        char itens[MAX_SIZE];//intens 
+        char itens[MAX_SIZE];//letras 
         int topo;
     };
 
@@ -20,11 +20,11 @@ int vazia(struct Pilha *p)
     }
 
 void push(struct Pilha *p, char item) 
-    {
-        char letra_ini;
-        char letra_final;
-        letra_ini = 0;
-        letra_final = 0;
+    { 
+        char item_ini, item_fim;
+        palavra[i] = item_fim;
+        item_fim++;
+        item->itens
     }
 
 char pop(struct Pilha *p)
