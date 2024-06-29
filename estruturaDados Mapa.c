@@ -20,26 +20,27 @@ int vazia(struct Pilha *p)
     }
 
 void push(struct Pilha *p, char item) 
-    { 
-        char item_ini, item_fim;
-        palavra[i] = item_fim;
-        item_fim++;
-        item->itens
+    {
+       int novo_topo = p->topo++;
+       p->itens[novo_topo] = item;
+
     }
 
 char pop(struct Pilha *p)
     {
-        //code
+        char item = p->itens[p->topo];
+        p->topo--;
+        return item;
     }
 
 char topo(struct Pilha *p)
     {
-          //code  
+         return p->itens[p->topo]; 
     }
     
 void limpar(struct Pilha *p)
     {
-        //code
+        p->topo = -1;
     }
 
 int main()
