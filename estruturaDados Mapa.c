@@ -28,9 +28,17 @@ void push(struct Pilha *p, char item)
 
 char pop(struct Pilha *p)
     {
-        char item = p->itens[p->topo];
-        p->topo--;
-        return item;
+        if (p->topo > -1)
+            {
+                char item = p->itens[p->topo];
+                p->topo--;
+                return item;
+            }
+        else
+            {
+               return '\0';
+            }
+        
     }
 
 char topo(struct Pilha *p)
