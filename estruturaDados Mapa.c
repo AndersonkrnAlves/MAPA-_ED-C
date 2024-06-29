@@ -21,12 +21,12 @@ int vazia(struct Pilha *p)
 
 void push(struct Pilha *p, char item) 
     {
-       /*if (vazia (p))
+       if (vazia (p))
        {
         printf("Pilha vazia\n");
         return;
-       }*/
-       int novo_topo = p->topo++;
+       }
+        p->topo++;
         p->itens[p->topo] = item;
 
     }
