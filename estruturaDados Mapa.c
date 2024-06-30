@@ -28,7 +28,6 @@ void push(struct Pilha *p, char item)
        }
         p->topo++;
         p->itens[p->topo] = item;
-
     }
 
 char pop(struct Pilha *p)
@@ -48,7 +47,16 @@ char pop(struct Pilha *p)
 
 char topo(struct Pilha *p)
     {
-         return p->itens[p->topo]; 
+         
+        if (p->topo > - 1)
+        {
+            return p->itens[p->topo];
+        }
+        else
+        {
+            return '\0';
+        }
+         
     }
     
 void limpar(struct Pilha *p)
@@ -65,9 +73,9 @@ int main()
         {
             printf("\nDigite - 1 para adcionar uma palavra a pilha\n");
             printf("Digite - 2 para desempilhar a palavra \n");
-            printf("Digite- 3 para limpar a pilha\n");
+            printf("Digite - 3 para limpar a pilha\n");
             printf("Digite - 4 para exibir o topo da pilha\n");
-            printf("Digit - 0 para sair\n\n");
+            printf("Digite - 0 para sair\n\n");
 
             int opcao;
             printf("\nEscolha uma opcao: ");
