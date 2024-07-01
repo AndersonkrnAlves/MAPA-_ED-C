@@ -48,7 +48,7 @@ char pop(struct Pilha *p)
 char topo(struct Pilha *p)
     {
          
-        if (p->topo > - 1)
+        if (p->topo > -1)
         {
             return p->itens[p->topo];
         }
