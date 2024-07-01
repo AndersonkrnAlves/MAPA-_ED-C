@@ -137,9 +137,63 @@ void dijkstra( int vertices, int origem, int destino, int *custos)
                         while (i != -1) 
                             {
                                 tmp[cont] = i + 1;
-
+                                cont++;
+                                i = ant[i];
                         }
+                        for ( i = cont; i > 0; i--)
+                            {
+                                printf("%d ->", tmp[i-1]);
+                        }
+                        printf("%d", destino);
+                        printf("\n\tCusto: %d\n", (int) dist[destino-1]);
+                }       
+}
+void grafo_criar(void)
+    {
+        do
+            {
+                printf("\nInforme o numero de vertices (no minimo 3 ): ");
+                scanf("%d", &vertices);
+        } while (vertices < 3);
+        if (!custos)
+            {
+                free(custos);
+        }
+        custos = (int *)malloc(sizeof(int)*vertices*vertices);
+        //Se o compilador falhou em alocar espaço na memória
+        if (custos == NULL) 
+            {
+                system("color fc");
+                printf("**Erro: Memoria Insuficiente **");
+                exit(-1);
+        }
+        //Preenchendo a matriz com -1
+        for (int i = 0; i <= vertices * vertices; i++)
+            {
+                custos[i] = -1;
+        }
+        do
+            {
+                system("cls");
+                printf("Entre com as Arestas:\n");
+                do
+                    {
+                        printf("Origem (entre 1 e %d ou '0' para sair): ", vertices);
+                        scanf("%d", &origem);
+                } while (origem < 0 || origem > vertices);
+                if (origem)
+                    {
+                        do
+                            {
+                                printf("Destino (entre 1 e %d, menos %d): ", vertices, origem);
+                                scanf("%d", &destino);
+                        } while (destino < 1 || destino > vertices || destino == origem);
+                        do
+                            {
+                                printf("Custo (positivo) do vertice %d para o vertice %d: ", origem, destino);
+                                scanf("%d", &custo);
+                        } while (custo < 0);
+                        custos[(origem-1) * vertices + destino -1] = custo;
                 }
-                                
-                
+        } while (origem);
 }
