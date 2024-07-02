@@ -221,7 +221,7 @@ void grafo_procurar (void)
 void menu_mostrar(void) 
     {
         system("cls");
-        printf("Implementação do algoritimo de Dijasktra\n");
+        printf("Implementacao do algoritimo de Dijasktra\n");
         printf("Opcoes\n");
         printf("\t 1 - Adicionar um Grafo\n");
         printf("\t 2 - Procura os Menores Caminhos no Grafo\n");
