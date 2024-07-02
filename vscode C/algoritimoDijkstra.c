@@ -23,7 +23,7 @@ int main(int argc, char **argv)
         {
             //Desenha o menu na tela
             menu_mostrar();
-            scanf("%d" &opt);
+            scanf("%d", &opt);
             switch (opt)
                 {
                     case 1:
@@ -196,4 +196,35 @@ void grafo_criar(void)
                         custos[(origem-1) * vertices + destino -1] = custo;
                 }
         } while (origem);
+}
+
+//Busca os menores caminhos entre as vértices
+void grafo_procurar (void) 
+    {
+        int i, j;
+        system("cls");
+        system("color 03");
+        printf("Lista dos Menores Caminhos no Grafo Dado: \n");
+        for (i = 1; i <= vertices; i++)
+            {   
+                for (j = 0; i <= vertices; j++)
+                    {
+                        dijkstra(vertices, i, j, custos);
+                }
+                printf("\n");
+        }
+        system("cls");
+        system("color 07");
+}
+
+//Desenho o menu na tela
+void menu_mostrar(void) 
+    {
+        system("cls");
+        printf("Implementação do algoritimo de Dijasktra\n");
+        printf("Opcoes\n");
+        printf("\t 1 - Adicionar um Grafo\n");
+        printf("\t 2 - Procura os Menores Caminhos no Grafo\n");
+        printf("\t 0 - Sair do programa\n");
+        printf("? ");
 }
