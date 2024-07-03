@@ -42,3 +42,40 @@ int main()
         system("Pause");
     return 0;
 }
+
+//Mostra o menu de opções 
+void menu_mostrar() 
+    {
+        lista_mostrar(lista);
+        printf("\n\nEscolha  uma das opcoes:\n");
+        printf("1 - Inserir no final da Litas\n");
+        printf("2 - Remover um item da Litas");
+        printf("0 - Sair\n\n");
+}
+
+//Executa a opção escolhida no menu
+void menu_selecionar(int op) 
+    {
+        switch (op)
+            {
+                case 1:
+                    lista_inserir(lista);
+                break;
+                
+                case 2:
+                    lista_remover(lista);
+            break;
+        }
+}
+
+//Insere um elemento no final da lista
+void lista_inserir(ptr_no lista) 
+    [
+        while (lista->proximo != NULL)
+            {
+                lista = lista->proximo;
+        }
+        lista->proximo = (ptr_no) malloc(sizeof(no));
+        lista = lista->proximo;
+        lista->dado.
+]
