@@ -88,4 +88,5 @@ void lista_remover(ptr_no lista)
         ptr_no atual;
         atual = (ptr_no) malloc(sizeof(no));
         printf("\n\nEscolha uma dos itens: \n");
+        scanf("%d", &dado);
 }
