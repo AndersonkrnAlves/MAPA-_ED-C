@@ -70,12 +70,22 @@ void menu_selecionar(int op)
 
 //Insere um elemento no final da lista
 void lista_inserir(ptr_no lista) 
-    [
+    {
         while (lista->proximo != NULL)
             {
                 lista = lista->proximo;
         }
         lista->proximo = (ptr_no) malloc(sizeof(no));
         lista = lista->proximo;
-        lista->dado.
-]
+        lista->dado = rand()%100;
+        lista->proximo = NULL;
+}
+
+//Remove um elemento da lsita
+void lista_remover(ptr_no lista) 
+    {
+        int dado;
+        ptr_no atual;
+        atual = (ptr_no) malloc(sizeof(no));
+        printf("\n\nEscolha uma dos itens: \n");
+}
